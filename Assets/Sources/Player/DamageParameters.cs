@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Sources.Shoot
+namespace Sources.Player
 {
     [Serializable]
     public class DamageParameters

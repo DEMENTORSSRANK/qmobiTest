@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using Sources.Extensions;
-using Sources.Shoot;
 using Sources.Ufos;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,7 +9,7 @@ namespace Sources.Spawn
 {
     public class UfoSpawner : Spawner
     {
-        [SerializeField] private ObjectPool<Ufos.Ufo> _pool;
+        [SerializeField] private ObjectPool<Ufo> _pool;
 
         [SerializeField] private BulletsSpawner _bulletsSpawner;
 

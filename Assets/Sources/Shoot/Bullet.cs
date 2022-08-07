@@ -40,7 +40,7 @@ namespace Sources
         public void AddExpect(IHitTaker hitTaker)
         {
             if (_expect.Contains(hitTaker))
-                throw new InvalidOperationException("Space object is already in expect");
+                throw new InvalidOperationException($"{nameof(hitTaker)} is already in expect");
 
             _expect.Push(hitTaker);
         }

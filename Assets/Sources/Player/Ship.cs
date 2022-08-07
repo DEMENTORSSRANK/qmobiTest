@@ -1,4 +1,3 @@
-using Sources.Asteroids;
 using Sources.Collisions;
 using Sources.Heal;
 using Sources.Movement;

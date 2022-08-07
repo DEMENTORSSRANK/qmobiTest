@@ -2,6 +2,7 @@
 using Sources.Asteroids;
 using Sources.Heal;
 using Sources.Shoot;
+using Sources.Ufos;
 
 namespace Sources.Player
 {
@@ -27,7 +28,7 @@ namespace Sources.Player
             
         }
 
-        public void Visit(Ufos.Ufo ufo)
+        public void Visit(Ufo ufo)
         {
             _health.TakeDamage(_damageParameters.Ufo);
         }

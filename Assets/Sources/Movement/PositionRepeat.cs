@@ -15,7 +15,7 @@ namespace Sources.Movement
 
         public PositionRepeat(Vector2 rightUpCorner, Vector2 leftLowerCorner)
         {
-            if (rightUpCorner.x < leftLowerCorner.x)
+            if (rightUpCorner.x < leftLowerCorner.x || _rightUpCorner.y < _leftLowerCorner.y)
                 throw new ArgumentException("Corners initialization failed");
 
             _rightUpCorner = rightUpCorner;

@@ -6,19 +6,19 @@ namespace Sources.Spawn
 {
     public sealed class AsteroidSplitter
     {
-        private readonly int _count;
+        private readonly int _maxIndex;
 
         private readonly float _angle;
 
-        public AsteroidSplitter(int count, float angle)
+        public AsteroidSplitter(int maxIndex, float angle)
         {
-            if (count < 0)
-                throw new ArgumentOutOfRangeException(nameof(count));
+            if (maxIndex < 0)
+                throw new ArgumentOutOfRangeException(nameof(maxIndex));
 
             if (angle < 0 || angle > 360)
                 throw new ArgumentOutOfRangeException(nameof(angle));
 
-            _count = count;
+            _maxIndex = maxIndex;
             _angle = angle;
         }
 
@@ -26,7 +26,7 @@ namespace Sources.Spawn
         {
             int nextStepIndex = asteroid.StepIndex + 1;
 
-            if (nextStepIndex >= _count)
+            if (nextStepIndex >= _maxIndex)
                 return;
 
             Transform asteroidTransform = asteroid.transform;
